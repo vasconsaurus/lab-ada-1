@@ -26,13 +26,13 @@ pipeline {
         echo 'deploying...'
       }
     }
-  }
-  stage('hello world') {
-    when {
+    stage('hello world') {
+      when {
         branch 'add-jenkinsfile'
       }
       steps {
         echo 'hello world!'
       }
     }
+  }
 }
