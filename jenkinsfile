@@ -3,22 +3,34 @@ pipeline {
 
   stages {
     stage('build') {
+      when {
+        branch 'add-jenkinsfile'
+      }
       steps {
         echo 'building...'
       }
     }
     stage('test') {
+      when {
+        branch 'add-jenkinsfile'
+      }
       steps {
         echo 'testing...'
       }
     }
     stage('deploy') {
+      when {
+        branch 'add-jenkinsfile'
+      }
       steps {
         echo 'deploying...'
       }
     }
   }
   stage('hello world') {
+    when {
+        branch 'add-jenkinsfile'
+      }
       steps {
         echo 'hello world!'
       }
