@@ -1,5 +1,8 @@
 pipeline {
   agent any;
+  options {
+    ansiColor('xterm')
+  }
 
   stages {
     stage('build') {
@@ -28,10 +31,10 @@ pipeline {
     }
     stage('hello world') {
       when {
-        branch 'main'
+        anyOf { branch 'extras-jenkinsfile'; branch 'main' }
       }
       steps {
-        echo 'hello world!'
+        echo '\033[34mHello\033[0m \033[33mcolorful\033[0m \033[35mworld!\033[0m'
       }
     }
   }
