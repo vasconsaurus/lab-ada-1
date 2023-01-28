@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('build') {
       when {
-        branch 'add-jenkinsfile'
+        branch 'main'
       }
       steps {
         echo 'building...'
@@ -12,7 +12,7 @@ pipeline {
     }
     stage('test') {
       when {
-        branch 'add-jenkinsfile'
+        branch 'main'
       }
       steps {
         echo 'testing...'
@@ -20,7 +20,7 @@ pipeline {
     }
     stage('deploy') {
       when {
-        branch 'add-jenkinsfile'
+        branch 'main'
       }
       steps {
         echo 'deploying...'
@@ -28,7 +28,7 @@ pipeline {
     }
     stage('hello world') {
       when {
-        branch 'add-jenkinsfile'
+        branch 'main'
       }
       steps {
         echo 'hello world!'
