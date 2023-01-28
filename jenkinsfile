@@ -1,0 +1,38 @@
+pipeline {
+  agent any;
+
+  stages {
+    stage('build') {
+      when {
+        branch 'main'
+      }
+      steps {
+        echo 'building...'
+      }
+    }
+    stage('test') {
+      when {
+        branch 'main'
+      }
+      steps {
+        echo 'testing...'
+      }
+    }
+    stage('deploy') {
+      when {
+        branch 'main'
+      }
+      steps {
+        echo 'deploying...'
+      }
+    }
+    stage('hello world') {
+      when {
+        branch 'main'
+      }
+      steps {
+        echo 'hello world!'
+      }
+    }
+  }
+}
